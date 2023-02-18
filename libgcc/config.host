@@ -926,6 +926,10 @@ lm32-*-uclinux*)
         extra_parts="$extra_parts crtbegin.o crtendS.o crtbeginT.o"
         tmake_file="lm32/t-lm32 lm32/t-uclinux t-libgcc-pic t-softfp-sfdf t-softfp"
 	;;
+loongarch*-*-elf*)
+	extra_parts="$extra_parts crtfastmath.o crti.o crtn.o"
+	tmake_file="$tmake_file t-crtfm loongarch/t-crtstuff"
+	;;
 loongarch*-*-linux*)
 	extra_parts="$extra_parts crtfastmath.o"
 	tmake_file="${tmake_file} t-crtfm loongarch/t-crtstuff"

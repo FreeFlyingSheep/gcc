@@ -80,6 +80,12 @@ along with GCC; see the file COPYING3.  If not see
 
 /* Specs for the compiler proper.  */
 
+/* SUBTARGET_CC1_SPEC is passed to the compiler proper.  It may be
+   overridden by subtargets.  */
+#ifndef SUBTARGET_CC1_SPEC
+#define SUBTARGET_CC1_SPEC ""
+#endif
+
 /* CC1_SPEC is the set of arguments to pass to the compiler proper.  */
 
 #undef CC1_SPEC
